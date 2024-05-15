@@ -1,9 +1,10 @@
-
+<p align="center">
+<img src="logo.png" >
+</p>
 <p align="center">
 
-![Static Badge](https://img.shields.io/badge/NPM-10.5.2-gray?style=flat&labelColor=green)
-
-![Static Badge](https://img.shields.io/badge/TypeScript-5.4.5-gray?style=flat&labelColor=blue)
+<img src = "https://img.shields.io/badge/NPM-10.5.2-gray?style=flat&labelColor=green">
+<img src = "https://img.shields.io/badge/TypeScript-5.4.5-gray?style=flat&labelColor=blue" >
 
 </p>
 
@@ -12,8 +13,6 @@
 
 um sistema profissional para gestao e organizaçao de veiculos de transporte. A API é capaz de registrar, excluir e alterar o registro de onibus funcionando na empresa, como tambem manipular seus passageiros e organizar automaticamente a posiçao de cada um deles.
  
-
-<img src="logo.png" align="center">
 
 
 ## Rodando o Projeto 🏃‍♂️💻
