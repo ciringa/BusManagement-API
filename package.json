@@ -1,0 +1,28 @@
+{
+  "name": "teste-de-retorno",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx watch src/server.ts",
+    "build": "tsup src"
+  },
+  "engines": {
+    "node": "20.13.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/swagger": "^8.14.0",
+    "@fastify/swagger-ui": "^3.0.0",
+    "@prisma/client": "^5.14.0",
+    "@types/node": "^20.12.12",
+    "fastify": "^4.27.0",
+    "fastify-type-provider-zod": "^1.1.9",
+    "prisma": "^5.14.0",
+    "tsup": "^8.0.2",
+    "tsx": "^4.10.2",
+    "typescript": "^5.4.5",
+    "zod": "^3.23.8"
+  }
+}
