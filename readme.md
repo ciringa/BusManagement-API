@@ -13,7 +13,7 @@
 um sistema profissional para gestao e organizaçao de veiculos de transporte. A API é capaz de registrar, excluir e alterar o registro de onibus funcionando na empresa, como tambem manipular seus passageiros e organizar automaticamente a posiçao de cada um deles.
  
 
-<img src="logo.png">
+<img src="logo.png" align="center">
 
 
 ## Rodando o Projeto 🏃‍♂️💻
