@@ -17,7 +17,7 @@ um sistema profissional para gestao e organizaçao de veiculos de transporte. A 
 
 ## Rodando o Projeto 🏃‍♂️💻
 ```
-git clone <link do Projeto>
+git clone https://github.com/ciringa/BusManagement-API.git
 ```
 ```
 cd BusManagementAPI
