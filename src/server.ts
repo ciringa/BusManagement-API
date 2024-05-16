@@ -14,7 +14,7 @@ import
 
 
 const app = fastify()
-const port = 2333
+const port = Number(process.env.PORT) || 4000
 
 
 
@@ -43,7 +43,7 @@ app.register(Router)
 
 
 app.listen({
-    port: process.env.PORT ? Number(process.env.port) : port
+    port: port
 },(err,path)=>{
     console.log(err || path)
 })
