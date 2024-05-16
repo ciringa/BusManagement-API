@@ -43,7 +43,8 @@ app.register(Router)
 
 
 app.listen({
-    port: port
+    port: port,
+    host:"0.0.0.0"
 },(err,path)=>{
     console.log(err || path)
 })
