@@ -16,6 +16,7 @@ um sistema profissional para gestao e organizaçao de veiculos de transporte. A 
 
 
 ## Rodando o Projeto 🏃‍♂️💻
+Para rodar localmente:
 ```
 git clone https://github.com/ciringa/BusManagement-API.git
 ```
@@ -28,6 +29,9 @@ npm i
 ```
 npm run start
 ```
+
+
+E para rodar nativamente acesse <a href = "https://busmanagement-api.onrender.com">Bus Management API</a>
 ## Features 🚀
 
 - Criação e estruturação de passageiros.
@@ -35,7 +39,7 @@ npm run start
 - Criação, Edição e exclusão dos onibus cadastrados.
 ## Documentação
 
-Quando a Aplicaçao estiver rodando acesse: [Documentação](http://[::1]:2333)
+Quando a Aplicaçao estiver rodando acesse: <a href = "https://busmanagement-api.onrender.com/docs">Documentação </a>
 
 
 
