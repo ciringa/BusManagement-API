@@ -53,3 +53,6 @@ Quando a Aplicaçao estiver rodando acesse: [Documentação](http://[::1]:2333)
 ![Static Badge](https://img.shields.io/badge/Zod-orange?style=for-the-badge&labelColor=gray)
 
 
+## Criterio de Organização de Passageiros 
+
+imagine um algoritmo de organização para ônibus de uma determinada empresa. o algoritmo tem como objetivo organizar os passageiros em suas cadeiras baseado no destino em que cada um deles deseja chegar( A, B ou C sendo A o mais próximo e C o mais distante), o sistema deve interpretar que, um passageiro que deseja chagar ao ponto A, evidentemente chegará primeiro do que o passageiro que deseja chegar ao ponto C, portanto é mais pratico que passageiro que deseja chegar em A se sente mais próximo da porta, enquanto o passageiro que deseja chegar a C se sente nas cadeiras mais ao fundo(porem ainda o mais próximo da porta possível). Tratando de linguagem de código podemos definir a seguinte regra: o passageiro A deve se sentar mais a frente que os passageiros B e C

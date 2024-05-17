@@ -138,4 +138,79 @@ export async function Bus(app: FastifyInstance) {
         })
     })  
 
+    //delete the specified bus
+    app.withTypeProvider<ZodTypeProvider>().delete("/bus/:BusId",{
+        schema:{
+            description:"Route used to delete the specified bus with the Id who matches the parameter BusId. This route also deletes all the passengers inside this bus. ",
+            tags:["Bus"],
+            params:z.object({
+                BusId: z.string().uuid()
+            }),
+            response:{
+                200:z.object({
+                    StatusCode:z.number(),
+                    Description:z.string(),
+                    selectedPassagersList: z.array(z.object({
+                        Id:z.number(),
+                        Name:z.string(),
+                    }))
+                }),
+                404: z.object({
+                    StatusCode:z.number(),
+                    Description:z.string()
+                })
+            }
+        }
+    },async (req,res)=>{
+        const [selectedBus,selectedPassagersList] = await Promise.all([
+            prisma.bus.findUnique({
+            where:{
+                Id:req.params.BusId
+            }
+            }),
+            prisma.passager.findMany({
+                where:{
+                    BusId:req.params.BusId
+                },
+                select:{
+                    Name:true,Id:true,BusId:false,busnew:false,Target:false,position:false
+                }
+            })
+        ])
+
+        if(selectedBus){
+
+            if(selectedPassagersList[0]){
+                selectedPassagersList.forEach(async Element => {
+                    await prisma.passager.delete({
+                        where:{
+                            Id:Element.Id
+                        }
+                    }).then(async()=>{
+                        await prisma.bus.delete({
+                            where:{
+                                Id:req.params.BusId
+                            }
+                        })
+                    })
+                })
+            }else{
+                await prisma.bus.delete({
+                    where:{Id:req.params.BusId}
+                })
+            }
+
+            res.status(200).send({
+                StatusCode:200,
+                Description:"the specified ID exists. The bus and all its passengers where deleted",
+                selectedPassagersList,
+                }
+            )
+        }else{
+            res.status(404).send({
+                StatusCode:404,
+                Description:"There's no bus with the specified ID"
+            })
+        }
+    })
 }

@@ -13,6 +13,7 @@ export async function Passager(app:FastifyInstance) {
                         Id:z.number().int(),
                         Name:z.string(),
                         Target:z.string(),
+                        BusId:z.string().uuid(),
                         position:z.number().nullable()
                         })
                     ),
@@ -28,7 +29,7 @@ export async function Passager(app:FastifyInstance) {
                 Id:true,
                 Name:true,
                 Target:true,
-                BusId:false,
+                BusId:true,
                 busnew:false,
                 position:true
             }

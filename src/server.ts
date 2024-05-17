@@ -25,8 +25,8 @@ app.register(fastifySwagger,{
     openapi: {
         info: {
           title: 'Bus API',
-          description: 'A Professional Bus Organizer sistem for enterprises',
-          version: '1.0.0',
+          description: "A Professional Bus Organizer sistem for enterprises with all the tools to organize your bus fleet and all the passengers. there's a little documentation of this",
+          version: '1.0.2',
         },
         servers: [],
       },
@@ -35,6 +35,7 @@ app.register(fastifySwagger,{
 })
 app.register(fastifySwaggerUi,{
     routePrefix:"/docs",
+    
 })
 
 
@@ -43,7 +44,8 @@ app.register(Router)
 
 
 app.listen({
-    port: port
+    port: port,
+    host:"0.0.0.0" || "localhost"
 },(err,path)=>{
     console.log(err || path)
 })
