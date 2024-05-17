@@ -17,15 +17,20 @@ um sistema profissional para gestao e organizaçao de veiculos de transporte. A 
 
 ## Rodando o Projeto 🏃‍♂️💻
 Para rodar localmente:
+
+clone o repostirorio 
 ```
 git clone https://github.com/ciringa/BusManagement-API.git
 ```
+entre na pasta raiz do projeto 
 ```
 cd BusManagementAPI
 ```
+instale as dependencias 
 ```
 npm i
 ```
+rode o projeto 
 ```
 npm run start
 ```
