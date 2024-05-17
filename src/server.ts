@@ -45,11 +45,7 @@ app.register(Router)
 
 app.listen({
     port: port,
-<<<<<<< HEAD
     host:"0.0.0.0" || "localhost"
-=======
-    host:"0.0.0.0"
->>>>>>> 9f1ec95c0231beaf75db5876586799c1928162c3
 },(err,path)=>{
     console.log(err || path)
 })
